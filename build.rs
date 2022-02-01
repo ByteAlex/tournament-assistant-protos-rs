@@ -47,11 +47,6 @@ pub fn generate_lib_file(mut modules: Vec<String>) -> String {
     for module in modules {
         lib_file.push_str(format!("pub mod {};\n", module).as_str());
     }
-
-    lib_file.push_str("\n");
-    lib_file.push_str("pub mod prost {\n");
-    lib_file.push_str("    pub use prost::*;\n");
-    lib_file.push_str("}");
     lib_file
 }
 
